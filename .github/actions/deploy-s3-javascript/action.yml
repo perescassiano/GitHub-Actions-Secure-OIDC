@@ -11,6 +11,10 @@ inputs:
   dist-folder:
     description: 'Folder containing deploy files'
     required: true
+outputs:
+  website-url:
+    description: 'Website URL'
+    
 runs:
   using: 'node16'
   main: 'main.js'

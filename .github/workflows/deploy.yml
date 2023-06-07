@@ -77,3 +77,6 @@ jobs:
         with:
           bucket: github-actions-custom-action-host
           dist-folder: ./dist
+      - name:
+        run: | 
+          echo "Live URL: ${{ steps.deploy.outputs.site-url}}"

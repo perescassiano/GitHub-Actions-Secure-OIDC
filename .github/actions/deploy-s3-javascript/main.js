@@ -13,6 +13,9 @@ function run () {
     const s3Uri = `s3://${bucket}`
     AWS_ACCESS_KEY_ID = 
     exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`)
+
+    const siteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com/`
+    core.setOutput('site-url', siteUrl)
 }
 
 run()
